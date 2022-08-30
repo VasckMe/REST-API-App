@@ -21,13 +21,14 @@ class ActionsCollectionViewController: UICollectionViewController {
     private let actions = Actions.allCases
 
     // MARK: - Navigation
-    /*
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if let usersTVC = segue.destination as? UsersTableViewController {
+            usersTVC.fetchUsersData()
+        }
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -62,8 +63,7 @@ class ActionsCollectionViewController: UICollectionViewController {
         case .downloadImage:
             performSegue(withIdentifier: "GoToImageVC", sender: nil)
         case .users:
-            break
-//            performSegue(withIdentifier: "GoToUsersTVC", sender: nil)
+            performSegue(withIdentifier: "GoToUsersTVC", sender: nil)
         }
     }
     

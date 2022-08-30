@@ -58,11 +58,42 @@
                     <navigationItem key="navigationItem" id="931-UU-8uu"/>
                     <connections>
                         <segue destination="4iD-Dw-DEV" kind="show" identifier="GoToImageVC" id="y6B-RC-9IM"/>
+                        <segue destination="6SO-kl-y7G" kind="show" identifier="GoToUsersTVC" id="3Em-jv-eUN"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qt-7g-MrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="70.982142857142847"/>
+        </scene>
+        <!--Users Table View Controller-->
+        <scene sceneID="FmV-ia-q47">
+            <objects>
+                <tableViewController id="6SO-kl-y7G" customClass="UsersTableViewController" customModule="REST_API_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2SU-cJ-0xk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ie6-C6-cvE">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ie6-C6-cvE" id="irk-dB-fhI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6SO-kl-y7G" id="lrK-Ij-lMP"/>
+                            <outlet property="delegate" destination="6SO-kl-y7G" id="PZl-HZ-cqK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="EwG-KD-Wzk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RW3-m4-agT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="545"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="AJ0-bC-wtx">
