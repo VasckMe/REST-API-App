@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: Enum
+
 enum Actions: String, CaseIterable {
     case downloadImage = "Download Image"
     case users = "Users"
@@ -14,24 +16,12 @@ enum Actions: String, CaseIterable {
 
 class ActionsCollectionViewController: UICollectionViewController {
 
-    private let actions = Actions.allCases
+    // MARK: Properties
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private let actions = Actions.allCases
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(ActionCollectionViewCell.self,
-//                                      forCellWithReuseIdentifier: ActionCollectionViewCell.identifier)
-
-        // Do any additional setup after loading the view.
-    }
-
-    /*
     // MARK: - Navigation
-
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
@@ -68,11 +58,13 @@ class ActionsCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let action = actions[indexPath.row]
-//        switch action {
-//        case .downloadImage:
-//        case .users:
-//            
-//        }
+        switch action {
+        case .downloadImage:
+            performSegue(withIdentifier: "GoToImageVC", sender: nil)
+        case .users:
+            break
+//            performSegue(withIdentifier: "GoToUsersTVC", sender: nil)
+        }
     }
     
     
@@ -108,7 +100,7 @@ class ActionsCollectionViewController: UICollectionViewController {
 
 extension ActionsCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width - 20
+        let width = UIScreen.main.bounds.width - 60
         return CGSize(width: (width), height: width / 2)
     }
 }

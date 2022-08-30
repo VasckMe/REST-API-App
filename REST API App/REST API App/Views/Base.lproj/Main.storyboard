@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,10 +56,53 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="931-UU-8uu"/>
+                    <connections>
+                        <segue destination="4iD-Dw-DEV" kind="show" identifier="GoToImageVC" id="y6B-RC-9IM"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qt-7g-MrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="70.982142857142847"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="AJ0-bC-wtx">
+            <objects>
+                <viewController id="4iD-Dw-DEV" customClass="ImageViewController" customModule="REST_API_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqz-yU-FYR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RnL-lb-PjR">
+                                <rect key="frame" x="25" y="139" width="364" height="671.5"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="vo3-CY-JOe">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P73-oA-vBq"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vo3-CY-JOe" firstAttribute="centerY" secondItem="RnL-lb-PjR" secondAttribute="centerY" id="0Av-Da-IDS"/>
+                            <constraint firstItem="RnL-lb-PjR" firstAttribute="centerY" secondItem="P73-oA-vBq" secondAttribute="centerY" id="2WM-JS-8Ui"/>
+                            <constraint firstItem="RnL-lb-PjR" firstAttribute="top" secondItem="P73-oA-vBq" secondAttribute="top" constant="50" id="O6H-cy-jvr"/>
+                            <constraint firstItem="P73-oA-vBq" firstAttribute="trailing" secondItem="RnL-lb-PjR" secondAttribute="trailing" constant="25" id="V6f-Tj-B3g"/>
+                            <constraint firstItem="P73-oA-vBq" firstAttribute="bottom" secondItem="RnL-lb-PjR" secondAttribute="bottom" constant="50" id="bas-Zg-Dqp"/>
+                            <constraint firstItem="RnL-lb-PjR" firstAttribute="leading" secondItem="P73-oA-vBq" secondAttribute="leading" constant="25" id="eaS-8w-iMv"/>
+                            <constraint firstItem="RnL-lb-PjR" firstAttribute="centerX" secondItem="P73-oA-vBq" secondAttribute="centerX" id="nIH-m6-9K5"/>
+                            <constraint firstItem="vo3-CY-JOe" firstAttribute="centerX" secondItem="RnL-lb-PjR" secondAttribute="centerX" id="uB4-Ht-6xy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pG5-n5-pKo"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="vo3-CY-JOe" id="hbV-FS-Ke7"/>
+                        <outlet property="downloadedImageView" destination="RnL-lb-PjR" id="S1T-uo-uOQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3u-LQ-zFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571" y="-106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pUd-vN-jVV">
@@ -80,6 +124,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
