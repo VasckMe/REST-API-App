@@ -22,6 +22,7 @@
 		180B049028BE62AF00E699C4 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B048E28BE62AF00E699C4 /* UserTableViewCell.swift */; };
 		180B049128BE62AF00E699C4 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180B048F28BE62AF00E699C4 /* UserTableViewCell.xib */; };
 		180B049328BE6DFE00E699C4 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B049228BE6DFE00E699C4 /* Company.swift */; };
+		187B41C528C2741100C1B253 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B41C428C2741100C1B253 /* DetailUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		180B048E28BE62AF00E699C4 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		180B048F28BE62AF00E699C4 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		180B049228BE6DFE00E699C4 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		187B41C428C2741100C1B253 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				180B048328BE596200E699C4 /* Actions Controllers */,
 				180B048028BE594100E699C4 /* Image Controllers */,
 				180B048628BE60D800E699C4 /* Users Controllers */,
+				187B41C328C273D900C1B253 /* Detail User Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +159,14 @@
 				180B048F28BE62AF00E699C4 /* UserTableViewCell.xib */,
 			);
 			path = "Cell VIew";
+			sourceTree = "<group>";
+		};
+		187B41C328C273D900C1B253 /* Detail User Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				187B41C428C2741100C1B253 /* DetailUserViewController.swift */,
+			);
+			path = "Detail User Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 				180B049328BE6DFE00E699C4 /* Company.swift in Sources */,
 				180B048A28BE621900E699C4 /* Address.swift in Sources */,
 				180B048828BE61C000E699C4 /* User.swift in Sources */,
+				187B41C528C2741100C1B253 /* DetailUserViewController.swift in Sources */,
 				180B048C28BE622000E699C4 /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
