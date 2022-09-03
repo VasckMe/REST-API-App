@@ -33,6 +33,7 @@
 		18B0C11E28C3C848004EB920 /* API Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C11D28C3C848004EB920 /* API Constants.swift */; };
 		18B0C12628C3CCF2004EB920 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */; };
 		18B0C12728C3CCF2004EB920 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */; };
+		18B0C12A28C3DF00004EB920 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		18B0C11D28C3C848004EB920 /* API Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Constants.swift"; sourceTree = "<group>"; };
 		18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,8 @@
 				180B048028BE594100E699C4 /* Image Controllers */,
 				180B048628BE60D800E699C4 /* Users Controllers */,
 				187B41C328C273D900C1B253 /* Detail User Controllers */,
+				187B41C828C3C4DB00C1B253 /* Posts Controllers */,
+				18B0C12828C3DED5004EB920 /* Detail Post Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,18 +193,17 @@
 			isa = PBXGroup;
 			children = (
 				187B41C428C2741100C1B253 /* DetailUserViewController.swift */,
-				187B41C828C3C4DB00C1B253 /* Posts */,
 			);
 			path = "Detail User Controllers";
 			sourceTree = "<group>";
 		};
-		187B41C828C3C4DB00C1B253 /* Posts */ = {
+		187B41C828C3C4DB00C1B253 /* Posts Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				187B41C928C3C53200C1B253 /* PostsTableViewController.swift */,
 				18B0C11F28C3CC6A004EB920 /* Post Cell View */,
 			);
-			path = Posts;
+			path = "Posts Controllers";
 			sourceTree = "<group>";
 		};
 		187B41CB28C3C60F00C1B253 /* User */ = {
@@ -229,6 +232,14 @@
 				18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */,
 			);
 			path = "Post Cell View";
+			sourceTree = "<group>";
+		};
+		18B0C12828C3DED5004EB920 /* Detail Post Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */,
+			);
+			path = "Detail Post Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				187B41CE28C3C62500C1B253 /* Post.swift in Sources */,
 				180B049028BE62AF00E699C4 /* UserTableViewCell.swift in Sources */,
 				18B0C12628C3CCF2004EB920 /* PostTableViewCell.swift in Sources */,
+				18B0C12A28C3DF00004EB920 /* DetailPostViewController.swift in Sources */,
 				18B0C11628C3C72E004EB920 /* Album.swift in Sources */,
 				180B047F28BE525D00E699C4 /* ActionCollectionViewCell.swift in Sources */,
 				180B046728BE4EC400E699C4 /* SceneDelegate.swift in Sources */,
