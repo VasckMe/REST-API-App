@@ -23,6 +23,16 @@
 		180B049128BE62AF00E699C4 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180B048F28BE62AF00E699C4 /* UserTableViewCell.xib */; };
 		180B049328BE6DFE00E699C4 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B049228BE6DFE00E699C4 /* Company.swift */; };
 		187B41C528C2741100C1B253 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B41C428C2741100C1B253 /* DetailUserViewController.swift */; };
+		187B41C728C3C4C500C1B253 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187B41C628C3C4C500C1B253 /* Posts.storyboard */; };
+		187B41CA28C3C53200C1B253 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B41C928C3C53200C1B253 /* PostsTableViewController.swift */; };
+		187B41CE28C3C62500C1B253 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B41CD28C3C62500C1B253 /* Post.swift */; };
+		18B0C11428C3C6E6004EB920 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C11328C3C6E6004EB920 /* Comment.swift */; };
+		18B0C11628C3C72E004EB920 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C11528C3C72E004EB920 /* Album.swift */; };
+		18B0C11828C3C766004EB920 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C11728C3C766004EB920 /* Photo.swift */; };
+		18B0C11A28C3C789004EB920 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C11928C3C789004EB920 /* Todo.swift */; };
+		18B0C11E28C3C848004EB920 /* API Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C11D28C3C848004EB920 /* API Constants.swift */; };
+		18B0C12628C3CCF2004EB920 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */; };
+		18B0C12728C3CCF2004EB920 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,16 @@
 		180B048F28BE62AF00E699C4 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		180B049228BE6DFE00E699C4 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		187B41C428C2741100C1B253 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		187B41C628C3C4C500C1B253 /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
+		187B41C928C3C53200C1B253 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		187B41CD28C3C62500C1B253 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		18B0C11328C3C6E6004EB920 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		18B0C11528C3C72E004EB920 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		18B0C11728C3C766004EB920 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		18B0C11928C3C789004EB920 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		18B0C11D28C3C848004EB920 /* API Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Constants.swift"; sourceTree = "<group>"; };
+		18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +96,7 @@
 		180B046328BE4EC400E699C4 /* REST API App */ = {
 			isa = PBXGroup;
 			children = (
+				18B0C11B28C3C823004EB920 /* API  */,
 				180B047B28BE4FA000E699C4 /* Models */,
 				180B047928BE4F1300E699C4 /* Controllers */,
 				180B047A28BE4F1E00E699C4 /* Views */,
@@ -110,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				180B046A28BE4EC400E699C4 /* Main.storyboard */,
+				187B41C628C3C4C500C1B253 /* Posts.storyboard */,
 				180B046F28BE4EC600E699C4 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -118,10 +140,12 @@
 		180B047B28BE4FA000E699C4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				180B048728BE61C000E699C4 /* User.swift */,
-				180B048928BE621900E699C4 /* Address.swift */,
-				180B048B28BE622000E699C4 /* Geo.swift */,
-				180B049228BE6DFE00E699C4 /* Company.swift */,
+				187B41CB28C3C60F00C1B253 /* User */,
+				187B41CD28C3C62500C1B253 /* Post.swift */,
+				18B0C11328C3C6E6004EB920 /* Comment.swift */,
+				18B0C11528C3C72E004EB920 /* Album.swift */,
+				18B0C11728C3C766004EB920 /* Photo.swift */,
+				18B0C11928C3C789004EB920 /* Todo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,8 +189,46 @@
 			isa = PBXGroup;
 			children = (
 				187B41C428C2741100C1B253 /* DetailUserViewController.swift */,
+				187B41C828C3C4DB00C1B253 /* Posts */,
 			);
 			path = "Detail User Controllers";
+			sourceTree = "<group>";
+		};
+		187B41C828C3C4DB00C1B253 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				187B41C928C3C53200C1B253 /* PostsTableViewController.swift */,
+				18B0C11F28C3CC6A004EB920 /* Post Cell View */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		187B41CB28C3C60F00C1B253 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				180B048728BE61C000E699C4 /* User.swift */,
+				180B048928BE621900E699C4 /* Address.swift */,
+				180B048B28BE622000E699C4 /* Geo.swift */,
+				180B049228BE6DFE00E699C4 /* Company.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		18B0C11B28C3C823004EB920 /* API  */ = {
+			isa = PBXGroup;
+			children = (
+				18B0C11D28C3C848004EB920 /* API Constants.swift */,
+			);
+			path = "API ";
+			sourceTree = "<group>";
+		};
+		18B0C11F28C3CC6A004EB920 /* Post Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */,
+				18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */,
+			);
+			path = "Post Cell View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				180B049128BE62AF00E699C4 /* UserTableViewCell.xib in Resources */,
+				187B41C728C3C4C500C1B253 /* Posts.storyboard in Resources */,
 				180B047128BE4EC600E699C4 /* LaunchScreen.storyboard in Resources */,
+				18B0C12728C3CCF2004EB920 /* PostTableViewCell.xib in Resources */,
 				180B046E28BE4EC600E699C4 /* Assets.xcassets in Resources */,
 				180B046C28BE4EC400E699C4 /* Main.storyboard in Resources */,
 			);
@@ -243,14 +307,22 @@
 			files = (
 				180B046528BE4EC400E699C4 /* AppDelegate.swift in Sources */,
 				180B047D28BE514E00E699C4 /* ActionsCollectionViewController.swift in Sources */,
+				187B41CA28C3C53200C1B253 /* PostsTableViewController.swift in Sources */,
 				180B048528BE60CF00E699C4 /* UsersTableViewController.swift in Sources */,
 				180B048228BE595E00E699C4 /* ImageViewController.swift in Sources */,
+				187B41CE28C3C62500C1B253 /* Post.swift in Sources */,
 				180B049028BE62AF00E699C4 /* UserTableViewCell.swift in Sources */,
+				18B0C12628C3CCF2004EB920 /* PostTableViewCell.swift in Sources */,
+				18B0C11628C3C72E004EB920 /* Album.swift in Sources */,
 				180B047F28BE525D00E699C4 /* ActionCollectionViewCell.swift in Sources */,
 				180B046728BE4EC400E699C4 /* SceneDelegate.swift in Sources */,
+				18B0C11828C3C766004EB920 /* Photo.swift in Sources */,
 				180B049328BE6DFE00E699C4 /* Company.swift in Sources */,
+				18B0C11428C3C6E6004EB920 /* Comment.swift in Sources */,
+				18B0C11A28C3C789004EB920 /* Todo.swift in Sources */,
 				180B048A28BE621900E699C4 /* Address.swift in Sources */,
 				180B048828BE61C000E699C4 /* User.swift in Sources */,
+				18B0C11E28C3C848004EB920 /* API Constants.swift in Sources */,
 				187B41C528C2741100C1B253 /* DetailUserViewController.swift in Sources */,
 				180B048C28BE622000E699C4 /* Geo.swift in Sources */,
 			);
