@@ -43,6 +43,10 @@
 		18B0C12728C3CCF2004EB920 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */; };
 		18B0C12A28C3DF00004EB920 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */; };
 		18EC607728C4F7CE00874663 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */; };
+		18EC607A28C4FBF400874663 /* Todos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EC607928C4FBF400874663 /* Todos.storyboard */; };
+		18EC607C28C4FC1000874663 /* TodosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607B28C4FC1000874663 /* TodosTableViewController.swift */; };
+		18EC608028C4FCE200874663 /* TodosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607E28C4FCE200874663 /* TodosTableViewCell.swift */; };
+		18EC608128C4FCE200874663 /* TodosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EC607F28C4FCE200874663 /* TodosTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,10 @@
 		18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
 		18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
+		18EC607928C4FBF400874663 /* Todos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todos.storyboard; sourceTree = "<group>"; };
+		18EC607B28C4FC1000874663 /* TodosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosTableViewController.swift; sourceTree = "<group>"; };
+		18EC607E28C4FCE200874663 /* TodosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosTableViewCell.swift; sourceTree = "<group>"; };
+		18EC607F28C4FCE200874663 /* TodosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodosTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 				1897AACD28C4B74500BD724B /* Albums Controllers */,
 				1897AAD428C4C2AE00BD724B /* Photos Controllers */,
 				18EC607528C4F7B700874663 /* Detail Photo Controllers */,
+				18EC607828C4FBB600874663 /* Todos Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +167,7 @@
 				180B046A28BE4EC400E699C4 /* Main.storyboard */,
 				187B41C628C3C4C500C1B253 /* Posts.storyboard */,
 				1897AACB28C4B72F00BD724B /* Albums.storyboard */,
+				18EC607928C4FBF400874663 /* Todos.storyboard */,
 				180B046F28BE4EC600E699C4 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -309,6 +319,24 @@
 			path = "Detail Photo Controllers";
 			sourceTree = "<group>";
 		};
+		18EC607828C4FBB600874663 /* Todos Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18EC607B28C4FC1000874663 /* TodosTableViewController.swift */,
+				18EC607D28C4FCCE00874663 /* Todos Cell View */,
+			);
+			path = "Todos Controllers";
+			sourceTree = "<group>";
+		};
+		18EC607D28C4FCCE00874663 /* Todos Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				18EC607E28C4FCE200874663 /* TodosTableViewCell.swift */,
+				18EC607F28C4FCE200874663 /* TodosTableViewCell.xib */,
+			);
+			path = "Todos Cell View";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,7 +402,9 @@
 				1897AACC28C4B72F00BD724B /* Albums.storyboard in Resources */,
 				1897AACA28C4B1A300BD724B /* CommentTableViewCell.xib in Resources */,
 				1897AADB28C4C39C00BD724B /* PhotosCollectionViewCell.xib in Resources */,
+				18EC608128C4FCE200874663 /* TodosTableViewCell.xib in Resources */,
 				180B046E28BE4EC600E699C4 /* Assets.xcassets in Resources */,
+				18EC607A28C4FBF400874663 /* Todos.storyboard in Resources */,
 				180B046C28BE4EC400E699C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,12 +435,14 @@
 				180B049328BE6DFE00E699C4 /* Company.swift in Sources */,
 				18B0C11428C3C6E6004EB920 /* Comment.swift in Sources */,
 				1897AADA28C4C39C00BD724B /* PhotosCollectionViewCell.swift in Sources */,
+				18EC608028C4FCE200874663 /* TodosTableViewCell.swift in Sources */,
 				18B0C11A28C3C789004EB920 /* Todo.swift in Sources */,
 				180B048A28BE621900E699C4 /* Address.swift in Sources */,
 				180B048828BE61C000E699C4 /* User.swift in Sources */,
 				1897AAD328C4B89600BD724B /* AlbumsCollectionViewCell.swift in Sources */,
 				18B0C11E28C3C848004EB920 /* API Constants.swift in Sources */,
 				187B41C528C2741100C1B253 /* DetailUserViewController.swift in Sources */,
+				18EC607C28C4FC1000874663 /* TodosTableViewController.swift in Sources */,
 				1897AAD628C4C2C200BD724B /* PhotosCollectionViewController.swift in Sources */,
 				180B048C28BE622000E699C4 /* Geo.swift in Sources */,
 			);

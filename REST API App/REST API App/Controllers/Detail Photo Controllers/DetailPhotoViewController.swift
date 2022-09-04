@@ -9,10 +9,10 @@ import UIKit
 
 class DetailPhotoViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var urlLabel: UILabel!
-    @IBOutlet weak var thumbnaiUrlLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var urlLabel: UILabel!
+    @IBOutlet private weak var thumbnaiUrlLabel: UILabel!
     
     var photo: Photo?
     var image: UIImage?
@@ -29,15 +29,4 @@ class DetailPhotoViewController: UIViewController {
         urlLabel.text = photo?.url
         thumbnaiUrlLabel.text = photo?.thumbnailUrl
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

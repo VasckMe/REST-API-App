@@ -488,6 +488,9 @@
                                                                         <buttonConfiguration key="configuration" style="plain" title="Todos">
                                                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                         </buttonConfiguration>
+                                                                        <connections>
+                                                                            <segue destination="wIx-aU-aqs" kind="show" identifier="GoToTodosTVC" id="2tV-Hd-azB"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -572,6 +575,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5C-YB-8bD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3215" y="607"/>
+        </scene>
+        <!--Todos-->
+        <scene sceneID="W8w-hw-Zlx">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TodosTVC" storyboardName="Todos" id="wIx-aU-aqs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IrY-cq-85H"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIO-Ia-eh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3151" y="670"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="AJ0-bC-wtx">

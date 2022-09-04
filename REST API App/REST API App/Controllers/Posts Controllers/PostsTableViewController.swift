@@ -16,6 +16,7 @@ class PostsTableViewController: UITableViewController {
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchPosts()
         tableView.register(UINib(nibName: PostTableViewCell.identifier, bundle: nil),
                            forCellReuseIdentifier: PostTableViewCell.identifier)
     }

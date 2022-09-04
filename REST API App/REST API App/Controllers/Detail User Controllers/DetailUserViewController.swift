@@ -58,12 +58,14 @@ class DetailUserViewController: UIViewController {
         if let postsTVC = segue.destination as? PostsTableViewController,
            segue.identifier == "GoToPostsTVC" {
             postsTVC.user = user
-            postsTVC.fetchPosts()
         }
         if let albumsCVC = segue.destination as? AlbumsCollectionViewController,
            segue.identifier == "GoToAlbumsCVC" {
             albumsCVC.user = user
-//            albumsCVC.fetchAlbums()
+        }
+        if let todosTVC = segue.destination as? TodosTableViewController,
+           segue.identifier == "GoToTodosTVC" {
+            todosTVC.user = user
         }
     }
 }
