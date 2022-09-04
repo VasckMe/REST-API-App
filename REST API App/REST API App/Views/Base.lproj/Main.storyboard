@@ -110,10 +110,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usj-m7-exV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1153"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1216"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4HU-9x-WWY">
-                                                <rect key="frame" x="25" y="50" width="364" height="1078"/>
+                                                <rect key="frame" x="25" y="50" width="364" height="1141"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="oUc-5b-yBU">
                                                         <rect key="frame" x="0.0" y="0.0" width="364" height="296"/>
@@ -446,7 +446,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cSh-f4-ONK">
-                                                        <rect key="frame" x="0.0" y="838" width="364" height="240"/>
+                                                        <rect key="frame" x="0.0" y="838" width="364" height="303"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="134" translatesAutoresizingMaskIntoConstraints="NO" id="SRX-r2-cpQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="24"/>
@@ -460,7 +460,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ht8-hj-2GZ">
-                                                                <rect key="frame" x="0.0" y="49" width="364" height="164"/>
+                                                                <rect key="frame" x="0.0" y="49" width="364" height="227"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgB-z5-5ce">
                                                                         <rect key="frame" x="144.5" y="0.0" width="75.5" height="38"/>
@@ -492,10 +492,20 @@
                                                                             <segue destination="wIx-aU-aqs" kind="show" identifier="GoToTodosTVC" id="2tV-Hd-azB"/>
                                                                         </connections>
                                                                     </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMv-WE-4hj">
+                                                                        <rect key="frame" x="130.5" y="189" width="103" height="38"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Location">
+                                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <segue destination="qID-PS-yh3" kind="show" identifier="GoToLocationVC" id="Nol-Kw-0T7"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6T8-Rb-199">
-                                                                <rect key="frame" x="0.0" y="238" width="364" height="2"/>
+                                                                <rect key="frame" x="0.0" y="301" width="364" height="2"/>
                                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="2" id="DEg-Mc-imX"/>
@@ -585,6 +595,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIO-Ia-eh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3151" y="670"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="DPG-ak-yBx">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LocationVC" storyboardName="Location" id="qID-PS-yh3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4GQ-Fy-hbZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISY-zn-48o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142" y="755"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="AJ0-bC-wtx">

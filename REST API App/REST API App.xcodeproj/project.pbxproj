@@ -47,6 +47,8 @@
 		18EC607C28C4FC1000874663 /* TodosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607B28C4FC1000874663 /* TodosTableViewController.swift */; };
 		18EC608028C4FCE200874663 /* TodosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607E28C4FCE200874663 /* TodosTableViewCell.swift */; };
 		18EC608128C4FCE200874663 /* TodosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EC607F28C4FCE200874663 /* TodosTableViewCell.xib */; };
+		18EC608328C5039D00874663 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EC608228C5039D00874663 /* Location.storyboard */; };
+		18EC608628C503CF00874663 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC608528C503CF00874663 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		18EC607B28C4FC1000874663 /* TodosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosTableViewController.swift; sourceTree = "<group>"; };
 		18EC607E28C4FCE200874663 /* TodosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosTableViewCell.swift; sourceTree = "<group>"; };
 		18EC607F28C4FCE200874663 /* TodosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodosTableViewCell.xib; sourceTree = "<group>"; };
+		18EC608228C5039D00874663 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		18EC608528C503CF00874663 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 				1897AAD428C4C2AE00BD724B /* Photos Controllers */,
 				18EC607528C4F7B700874663 /* Detail Photo Controllers */,
 				18EC607828C4FBB600874663 /* Todos Controllers */,
+				18EC608428C503B900874663 /* Location Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				187B41C628C3C4C500C1B253 /* Posts.storyboard */,
 				1897AACB28C4B72F00BD724B /* Albums.storyboard */,
 				18EC607928C4FBF400874663 /* Todos.storyboard */,
+				18EC608228C5039D00874663 /* Location.storyboard */,
 				180B046F28BE4EC600E699C4 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -337,6 +343,14 @@
 			path = "Todos Cell View";
 			sourceTree = "<group>";
 		};
+		18EC608428C503B900874663 /* Location Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18EC608528C503CF00874663 /* LocationViewController.swift */,
+			);
+			path = "Location Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +412,7 @@
 				180B049128BE62AF00E699C4 /* UserTableViewCell.xib in Resources */,
 				187B41C728C3C4C500C1B253 /* Posts.storyboard in Resources */,
 				180B047128BE4EC600E699C4 /* LaunchScreen.storyboard in Resources */,
+				18EC608328C5039D00874663 /* Location.storyboard in Resources */,
 				18B0C12728C3CCF2004EB920 /* PostTableViewCell.xib in Resources */,
 				1897AACC28C4B72F00BD724B /* Albums.storyboard in Resources */,
 				1897AACA28C4B1A300BD724B /* CommentTableViewCell.xib in Resources */,
@@ -431,6 +446,7 @@
 				1897AAC928C4B1A300BD724B /* CommentTableViewCell.swift in Sources */,
 				180B046728BE4EC400E699C4 /* SceneDelegate.swift in Sources */,
 				1897AAD128C4B81800BD724B /* AlbumsCollectionViewController.swift in Sources */,
+				18EC608628C503CF00874663 /* LocationViewController.swift in Sources */,
 				18B0C11828C3C766004EB920 /* Photo.swift in Sources */,
 				180B049328BE6DFE00E699C4 /* Company.swift in Sources */,
 				18B0C11428C3C6E6004EB920 /* Comment.swift in Sources */,

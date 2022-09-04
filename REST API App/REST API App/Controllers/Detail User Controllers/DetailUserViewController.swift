@@ -67,5 +67,9 @@ class DetailUserViewController: UIViewController {
            segue.identifier == "GoToTodosTVC" {
             todosTVC.user = user
         }
+        if let locationVC = segue.destination as? LocationViewController,
+           segue.identifier == "GoToLocationVC" {
+            locationVC.user = user
+        }
     }
 }
