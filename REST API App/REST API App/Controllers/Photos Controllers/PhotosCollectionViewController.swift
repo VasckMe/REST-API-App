@@ -15,6 +15,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Photos"
         self.collectionView!.register(
             UINib(nibName: PhotosCollectionViewCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: PhotosCollectionViewCell.identifier)
@@ -60,7 +61,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     func fetchPhotos() {
         guard
             let album = album,
-            let url = URL(string: ApiConstants.photoPath+"?albumId=\(album.id)") else { return }
+            let url = URL(string: ApiConstants.photoPath + "?albumId=\(album.id)") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             if let error = error {
                 print(error)

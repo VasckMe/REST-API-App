@@ -16,6 +16,7 @@ class PostsTableViewController: UITableViewController {
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Posts"
         fetchPosts()
         tableView.register(UINib(nibName: PostTableViewCell.identifier, bundle: nil),
                            forCellReuseIdentifier: PostTableViewCell.identifier)
@@ -52,27 +53,27 @@ class PostsTableViewController: UITableViewController {
     func fetchPosts() {
         guard
             let user = user,
-            let urlPosts = URL(string: ApiConstants.postsPath+"?userId=\(user.id)")
+            let urlPosts = URL(string: ApiConstants.postsPath + "?userId=\(user.id)")
         else { return }
         
         let task = URLSession.shared.dataTask(with: urlPosts) { [weak self] data, response, error in
-                if let error = error {
+            if let error = error {
+                print(error)
+            }
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    self?.posts = try JSONDecoder().decode([Post].self, from: data)
+                } catch {
                     print(error)
                 }
-                if let response = response {
-                    print(response)
-                }
-                if let data = data {
-                    do {
-                        self?.posts = try JSONDecoder().decode([Post].self, from: data)
-                    } catch {
-                        print(error)
-                    }
-                }
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
             }
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
         task.resume()
     }
     
@@ -84,7 +85,6 @@ class PostsTableViewController: UITableViewController {
         {
             detailPostVC.post = posts[indexPath.row]
             detailPostVC.user = user
-            detailPostVC.fetchComments()
         }
     }
 }

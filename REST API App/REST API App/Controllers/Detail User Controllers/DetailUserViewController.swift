@@ -9,7 +9,7 @@ import UIKit
 
 class DetailUserViewController: UIViewController {
 
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var usernameLabel: UILabel!
     @IBOutlet private weak var emailLabel: UILabel!
@@ -24,16 +24,17 @@ class DetailUserViewController: UIViewController {
     @IBOutlet private weak var catchPhraseLabel: UILabel!
     @IBOutlet private weak var bsLabel: UILabel!
     
-    // MARK: Properties
+    // MARK: - Properties
     var user: User?
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "User"
         setupUI()
     }
     
-    // MARK: Private functions
+    // MARK: - Private functions
     private func setupUI() {
         guard let user = user else { return }
         nameLabel.text = user.name

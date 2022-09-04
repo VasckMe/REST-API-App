@@ -15,6 +15,7 @@ class AlbumsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAlbums()
+        title = "Albums"
     }
     
     // MARK: - Navigation
@@ -29,7 +30,7 @@ class AlbumsCollectionViewController: UICollectionViewController {
     }
     
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         albums.count
     }
@@ -48,13 +49,14 @@ class AlbumsCollectionViewController: UICollectionViewController {
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // MARK: - UICollectionViewDelegate
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "GoToPhotosCVC", sender: indexPath)
     }
 
-    func fetchAlbums() {
+    // MARK: - Functions
+    private func fetchAlbums() {
         guard
             let user = user,
             let urlAlbum = URL(string: ApiConstants.albumsPath + "?userId=\(user.id)")
@@ -82,6 +84,7 @@ class AlbumsCollectionViewController: UICollectionViewController {
     }
 }
 
+// MARK: - Extensions
 extension AlbumsCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width/2 - 5

@@ -19,7 +19,7 @@ class DetailPhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Photo"
         setupUI()
     }
     

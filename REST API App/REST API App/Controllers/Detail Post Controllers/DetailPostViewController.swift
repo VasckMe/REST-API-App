@@ -24,11 +24,13 @@ class DetailPostViewController: UIViewController {
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Post"
         commentsTableView.register(
             UINib(nibName: CommentTableViewCell.identifier, bundle: nil),
             forCellReuseIdentifier: CommentTableViewCell.identifier)
         commentsTableView.dataSource = self
         commentsTableView.delegate = self
+        fetchComments()
     }
     
     // MARK: - Functions
@@ -46,15 +48,17 @@ class DetailPostViewController: UIViewController {
         commentsLabel.text = "Comments: " + String(comments.count)
     }
     
-    func fetchComments() {
+    private func fetchComments() {
         guard
             let post = post,
-            let urlComments = URL(string: ApiConstants.commentsPath+"?postId=\(post.id)")
+            let urlComments = URL(string: ApiConstants.commentsPath + "?postId=\(post.id)")
         else {
             return
         }
         
-        let taskComment = URLSession.shared.dataTask(with: urlComments) { [weak self]data, response, error in
+        let taskComment = URLSession.shared.dataTask(
+            with: urlComments)
+        { [weak self] data, _, error in
             if let error = error {
                 print(error)
             }

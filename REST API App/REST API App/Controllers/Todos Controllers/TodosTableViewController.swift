@@ -14,6 +14,7 @@ class TodosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Todos"
         tableView.register(
             UINib(nibName: TodosTableViewCell.identifier, bundle: nil),
             forCellReuseIdentifier: TodosTableViewCell.identifier
@@ -49,27 +50,27 @@ class TodosTableViewController: UITableViewController {
     private func fetchTodos() {
         guard
             let user = user,
-            let url = URL(string: ApiConstants.todosPath+"?userId=\(user.id)")
+            let url = URL(string: ApiConstants.todosPath + "?userId=\(user.id)")
         else { return }
-        
+
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-                if let error = error {
+            if let error = error {
+                print(error)
+            }
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    self?.todos = try JSONDecoder().decode([Todo].self, from: data)
+                } catch {
                     print(error)
                 }
-                if let response = response {
-                    print(response)
-                }
-                if let data = data {
-                    do {
-                        self?.todos = try JSONDecoder().decode([Todo].self, from: data)
-                    } catch {
-                        print(error)
-                    }
-                }
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
             }
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
         task.resume()
     }
 }

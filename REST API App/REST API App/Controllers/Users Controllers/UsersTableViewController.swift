@@ -17,6 +17,7 @@ class UsersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Users"
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil),
                            forCellReuseIdentifier: UserTableViewCell.identifier)
     }

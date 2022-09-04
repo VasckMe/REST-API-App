@@ -17,6 +17,7 @@ class LocationViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        title = "Location"
     }
     
     func setupUI() {
