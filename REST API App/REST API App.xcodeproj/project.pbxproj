@@ -42,6 +42,7 @@
 		18B0C12628C3CCF2004EB920 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */; };
 		18B0C12728C3CCF2004EB920 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */; };
 		18B0C12A28C3DF00004EB920 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */; };
+		18EC607728C4F7CE00874663 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				18B0C12828C3DED5004EB920 /* Detail Post Controllers */,
 				1897AACD28C4B74500BD724B /* Albums Controllers */,
 				1897AAD428C4C2AE00BD724B /* Photos Controllers */,
+				18EC607528C4F7B700874663 /* Detail Photo Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,14 @@
 			path = "Detail Post Controllers";
 			sourceTree = "<group>";
 		};
+		18EC607528C4F7B700874663 /* Detail Photo Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */,
+			);
+			path = "Detail Photo Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -381,6 +392,7 @@
 				180B048528BE60CF00E699C4 /* UsersTableViewController.swift in Sources */,
 				180B048228BE595E00E699C4 /* ImageViewController.swift in Sources */,
 				187B41CE28C3C62500C1B253 /* Post.swift in Sources */,
+				18EC607728C4F7CE00874663 /* DetailPhotoViewController.swift in Sources */,
 				180B049028BE62AF00E699C4 /* UserTableViewCell.swift in Sources */,
 				18B0C12628C3CCF2004EB920 /* PostTableViewCell.swift in Sources */,
 				18B0C12A28C3DF00004EB920 /* DetailPostViewController.swift in Sources */,

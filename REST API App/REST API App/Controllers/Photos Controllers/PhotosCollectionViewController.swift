@@ -21,15 +21,15 @@ class PhotosCollectionViewController: UICollectionViewController {
         fetchPhotos()
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if let detailPhotoVC = segue.destination as? DetailPhotoViewController,
+           let indexPath = sender as? IndexPath {
+            detailPhotoVC.photo = photos[indexPath.row]
+            detailPhotoVC.image = images[indexPath.row]
+        }
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -52,6 +52,11 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "GoToDetailPhotoVC", sender: indexPath)
+    }
+    
+    // MARK: - Functions
     func fetchPhotos() {
         guard
             let album = album,
