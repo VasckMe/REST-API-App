@@ -60,5 +60,10 @@ class DetailUserViewController: UIViewController {
             postsTVC.user = user
             postsTVC.fetchPosts()
         }
+        if let albumsCVC = segue.destination as? AlbumsCollectionViewController,
+           segue.identifier == "GoToAlbumsCVC" {
+            albumsCVC.user = user
+//            albumsCVC.fetchAlbums()
+        }
     }
 }
