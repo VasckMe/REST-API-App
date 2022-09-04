@@ -24,7 +24,6 @@ class DetailUserViewController: UIViewController {
     @IBOutlet private weak var catchPhraseLabel: UILabel!
     @IBOutlet private weak var bsLabel: UILabel!
     
-    
     // MARK: Properties
     var user: User?
     
@@ -55,7 +54,6 @@ class DetailUserViewController: UIViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let postsTVC = segue.destination as? PostsTableViewController,
            segue.identifier == "GoToPostsTVC" {

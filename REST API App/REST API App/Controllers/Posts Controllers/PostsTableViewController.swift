@@ -51,7 +51,7 @@ class PostsTableViewController: UITableViewController {
     func fetchPosts() {
         guard
             let user = user,
-            let urlPosts = URL(string: ApiConstants.postsPath+"?user=\(user.id)")
+            let urlPosts = URL(string: ApiConstants.postsPath+"?userId=\(user.id)")
         else { return }
         
         let task = URLSession.shared.dataTask(with: urlPosts) { [weak self] data, response, error in
@@ -77,9 +77,13 @@ class PostsTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailPostVC = segue.destination as? DetailPostViewController,
-           let indexPath = tableView.indexPathForSelectedRow {
+        if
+            let detailPostVC = segue.destination as? DetailPostViewController,
+            let indexPath = tableView.indexPathForSelectedRow
+        {
             detailPostVC.post = posts[indexPath.row]
+            detailPostVC.user = user
+            detailPostVC.fetchComments()
         }
     }
 }
