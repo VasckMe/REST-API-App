@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class LocationViewController: UIViewController, MKMapViewDelegate {
+class LocationViewController: UIViewController {
 
     @IBOutlet private weak var map: MKMapView!
     
@@ -32,6 +32,8 @@ class LocationViewController: UIViewController, MKMapViewDelegate {
             let annotaion = MKPointAnnotation()
             annotaion.coordinate.latitude = lat
             annotaion.coordinate.longitude = lng
+            annotaion.title = "\(user.username)'s location"
+            annotaion.subtitle = "Detail user location"
             map.addAnnotation(annotaion)
         }
     }
