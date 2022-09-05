@@ -23,6 +23,7 @@ class LocationViewController: UIViewController {
     func setupUI() {
         if
             let user = user,
+            let username = user.username,
             let geo = user.address?.geo,
             let lngStr = geo.lng,
             let latStr = geo.lat,
@@ -32,7 +33,7 @@ class LocationViewController: UIViewController {
             let annotaion = MKPointAnnotation()
             annotaion.coordinate.latitude = lat
             annotaion.coordinate.longitude = lng
-            annotaion.title = "\(user.username)'s location"
+            annotaion.title = "\(username)'s location"
             annotaion.subtitle = "Detail user location"
             map.addAnnotation(annotaion)
         }
