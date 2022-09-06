@@ -26,6 +26,8 @@
 		187B41C728C3C4C500C1B253 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187B41C628C3C4C500C1B253 /* Posts.storyboard */; };
 		187B41CA28C3C53200C1B253 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B41C928C3C53200C1B253 /* PostsTableViewController.swift */; };
 		187B41CE28C3C62500C1B253 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B41CD28C3C62500C1B253 /* Post.swift */; };
+		18920E2C28C7A4E700E5178D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18920E2B28C7A4E700E5178D /* Alamofire */; };
+		18920E2F28C7A4F400E5178D /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18920E2E28C7A4F400E5178D /* AlamofireImage */; };
 		1897AAC928C4B1A300BD724B /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1897AAC728C4B1A300BD724B /* CommentTableViewCell.swift */; };
 		1897AACA28C4B1A300BD724B /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897AAC828C4B1A300BD724B /* CommentTableViewCell.xib */; };
 		1897AACC28C4B72F00BD724B /* Albums.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1897AACB28C4B72F00BD724B /* Albums.storyboard */; };
@@ -49,6 +51,7 @@
 		18EC608128C4FCE200874663 /* TodosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EC607F28C4FCE200874663 /* TodosTableViewCell.xib */; };
 		18EC608328C5039D00874663 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EC608228C5039D00874663 /* Location.storyboard */; };
 		18EC608628C503CF00874663 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC608528C503CF00874663 /* LocationViewController.swift */; };
+		B3F09CE4486A777CF9122D47 /* Pods_REST_API_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44297E2426AC58F7F5E5756 /* Pods_REST_API_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		18EC607F28C4FCE200874663 /* TodosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodosTableViewCell.xib; sourceTree = "<group>"; };
 		18EC608228C5039D00874663 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		18EC608528C503CF00874663 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		80075A1065E8E92486C31701 /* Pods-REST API App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-REST API App.release.xcconfig"; path = "Target Support Files/Pods-REST API App/Pods-REST API App.release.xcconfig"; sourceTree = "<group>"; };
+		E44297E2426AC58F7F5E5756 /* Pods_REST_API_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_REST_API_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF78F0E62FBFBB212A417DE4 /* Pods-REST API App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-REST API App.debug.xcconfig"; path = "Target Support Files/Pods-REST API App/Pods-REST API App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F09CE4486A777CF9122D47 /* Pods_REST_API_App.framework in Frameworks */,
+				18920E2C28C7A4E700E5178D /* Alamofire in Frameworks */,
+				18920E2F28C7A4F400E5178D /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +123,8 @@
 			children = (
 				180B046328BE4EC400E699C4 /* REST API App */,
 				180B046228BE4EC400E699C4 /* Products */,
+				CC51ABD1E82990483D65C0DA /* Pods */,
+				3F5759281B395A904E2721E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -351,6 +362,23 @@
 			path = "Location Controllers";
 			sourceTree = "<group>";
 		};
+		3F5759281B395A904E2721E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E44297E2426AC58F7F5E5756 /* Pods_REST_API_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC51ABD1E82990483D65C0DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF78F0E62FBFBB212A417DE4 /* Pods-REST API App.debug.xcconfig */,
+				80075A1065E8E92486C31701 /* Pods-REST API App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -358,15 +386,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 180B047528BE4EC600E699C4 /* Build configuration list for PBXNativeTarget "REST API App" */;
 			buildPhases = (
+				BB0ED5F62A08D1B0A073EA09 /* [CP] Check Pods Manifest.lock */,
 				180B045D28BE4EC400E699C4 /* Sources */,
 				180B045E28BE4EC400E699C4 /* Frameworks */,
 				180B045F28BE4EC400E699C4 /* Resources */,
+				91A8D30E9DACCE30068A5F77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "REST API App";
+			packageProductDependencies = (
+				18920E2B28C7A4E700E5178D /* Alamofire */,
+				18920E2E28C7A4F400E5178D /* AlamofireImage */,
+			);
 			productName = "REST API App";
 			productReference = 180B046128BE4EC400E699C4 /* REST API App.app */;
 			productType = "com.apple.product-type.application";
@@ -395,6 +429,10 @@
 				Base,
 			);
 			mainGroup = 180B045828BE4EC400E699C4;
+			packageReferences = (
+				18920E2A28C7A4E700E5178D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				18920E2D28C7A4F400E5178D /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 180B046228BE4EC400E699C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -425,6 +463,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91A8D30E9DACCE30068A5F77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-REST API App/Pods-REST API App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-REST API App/Pods-REST API App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-REST API App/Pods-REST API App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0ED5F62A08D1B0A073EA09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-REST API App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		180B045D28BE4EC400E699C4 /* Sources */ = {
@@ -602,6 +682,7 @@
 		};
 		180B047628BE4EC600E699C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF78F0E62FBFBB212A417DE4 /* Pods-REST API App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -630,6 +711,7 @@
 		};
 		180B047728BE4EC600E699C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80075A1065E8E92486C31701 /* Pods-REST API App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -678,6 +760,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18920E2A28C7A4E700E5178D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		18920E2D28C7A4F400E5178D /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18920E2B28C7A4E700E5178D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18920E2A28C7A4E700E5178D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		18920E2E28C7A4F400E5178D /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18920E2D28C7A4F400E5178D /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 180B045928BE4EC400E699C4 /* Project object */;
 }
