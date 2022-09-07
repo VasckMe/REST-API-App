@@ -44,6 +44,8 @@
 		18B0C12628C3CCF2004EB920 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */; };
 		18B0C12728C3CCF2004EB920 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */; };
 		18B0C12A28C3DF00004EB920 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */; };
+		18CE2E1928C7AAB300BA7E51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE2E1828C7AAB300BA7E51 /* NetworkService.swift */; };
+		18CE2E1B28C7B31900BA7E51 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE2E1A28C7B31900BA7E51 /* NewPostViewController.swift */; };
 		18EC607728C4F7CE00874663 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */; };
 		18EC607A28C4FBF400874663 /* Todos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EC607928C4FBF400874663 /* Todos.storyboard */; };
 		18EC607C28C4FC1000874663 /* TodosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607B28C4FC1000874663 /* TodosTableViewController.swift */; };
@@ -92,6 +94,8 @@
 		18B0C12428C3CCF2004EB920 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		18B0C12528C3CCF2004EB920 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		18CE2E1828C7AAB300BA7E51 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		18CE2E1A28C7B31900BA7E51 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 		18EC607928C4FBF400874663 /* Todos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todos.storyboard; sourceTree = "<group>"; };
 		18EC607B28C4FC1000874663 /* TodosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosTableViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				187B41C928C3C53200C1B253 /* PostsTableViewController.swift */,
+				18CE2E1A28C7B31900BA7E51 /* NewPostViewController.swift */,
 				18B0C11F28C3CC6A004EB920 /* Post Cell View */,
 			);
 			path = "Posts Controllers";
@@ -306,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				18B0C11D28C3C848004EB920 /* API Constants.swift */,
+				18CE2E1828C7AAB300BA7E51 /* NetworkService.swift */,
 			);
 			path = "API ";
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				187B41CA28C3C53200C1B253 /* PostsTableViewController.swift in Sources */,
 				180B048528BE60CF00E699C4 /* UsersTableViewController.swift in Sources */,
 				180B048228BE595E00E699C4 /* ImageViewController.swift in Sources */,
+				18CE2E1B28C7B31900BA7E51 /* NewPostViewController.swift in Sources */,
 				187B41CE28C3C62500C1B253 /* Post.swift in Sources */,
 				18EC607728C4F7CE00874663 /* DetailPhotoViewController.swift in Sources */,
 				180B049028BE62AF00E699C4 /* UserTableViewCell.swift in Sources */,
@@ -539,6 +546,7 @@
 				18B0C11E28C3C848004EB920 /* API Constants.swift in Sources */,
 				187B41C528C2741100C1B253 /* DetailUserViewController.swift in Sources */,
 				18EC607C28C4FC1000874663 /* TodosTableViewController.swift in Sources */,
+				18CE2E1928C7AAB300BA7E51 /* NetworkService.swift in Sources */,
 				1897AAD628C4C2C200BD724B /* PhotosCollectionViewController.swift in Sources */,
 				180B048C28BE622000E699C4 /* Geo.swift in Sources */,
 			);

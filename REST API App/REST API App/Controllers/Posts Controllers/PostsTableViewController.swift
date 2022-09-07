@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol UpdatePostsData {
+    func update()
+}
+
 class PostsTableViewController: UITableViewController {
 
     // MARK: Properties
@@ -85,6 +89,15 @@ class PostsTableViewController: UITableViewController {
         {
             detailPostVC.post = posts[indexPath.row]
             detailPostVC.user = user
+        } else if let newPostVC = segue.destination as? NewPostViewController {
+            newPostVC.userId = user?.id
+            newPostVC.delegate = self
         }
+    }
+}
+
+extension PostsTableViewController: UpdatePostsData {
+    func update() {
+        fetchPosts()
     }
 }
