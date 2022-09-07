@@ -15,7 +15,6 @@ class DetailPhotoViewController: UIViewController {
     @IBOutlet private weak var thumbnaiUrlLabel: UILabel!
     
     var photo: Photo?
-    var image: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,9 @@ class DetailPhotoViewController: UIViewController {
     }
     
     private func setupUI() {
-        titleLabel.text = photo?.title
-        imageView.image = image
-        urlLabel.text = photo?.url
-        thumbnaiUrlLabel.text = photo?.thumbnailUrl
+//        titleLabel.text = photo?.title
+//        imageView.image = image
+//        urlLabel.text = photo?.url
+//        thumbnaiUrlLabel.text = photo?.thumbnailUrl
     }
 }

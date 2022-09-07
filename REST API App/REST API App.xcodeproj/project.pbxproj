@@ -46,6 +46,7 @@
 		18B0C12A28C3DF00004EB920 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */; };
 		18CE2E1928C7AAB300BA7E51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE2E1828C7AAB300BA7E51 /* NetworkService.swift */; };
 		18CE2E1B28C7B31900BA7E51 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE2E1A28C7B31900BA7E51 /* NewPostViewController.swift */; };
+		18CE2E1E28C8B1AE00BA7E51 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CE2E1D28C8B1AE00BA7E51 /* CacheManager.swift */; };
 		18EC607728C4F7CE00874663 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */; };
 		18EC607A28C4FBF400874663 /* Todos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EC607928C4FBF400874663 /* Todos.storyboard */; };
 		18EC607C28C4FC1000874663 /* TodosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC607B28C4FC1000874663 /* TodosTableViewController.swift */; };
@@ -96,6 +97,7 @@
 		18B0C12928C3DF00004EB920 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
 		18CE2E1828C7AAB300BA7E51 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		18CE2E1A28C7B31900BA7E51 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		18CE2E1D28C8B1AE00BA7E51 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		18EC607628C4F7CE00874663 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 		18EC607928C4FBF400874663 /* Todos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todos.storyboard; sourceTree = "<group>"; };
 		18EC607B28C4FC1000874663 /* TodosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosTableViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		180B046328BE4EC400E699C4 /* REST API App */ = {
 			isa = PBXGroup;
 			children = (
+				18CE2E1C28C8B19F00BA7E51 /* Managers */,
 				18B0C11B28C3C823004EB920 /* API  */,
 				180B047B28BE4FA000E699C4 /* Models */,
 				180B047928BE4F1300E699C4 /* Controllers */,
@@ -332,6 +335,14 @@
 				1897AAC628C4B16900BD724B /* Comment Cell View */,
 			);
 			path = "Detail Post Controllers";
+			sourceTree = "<group>";
+		};
+		18CE2E1C28C8B19F00BA7E51 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				18CE2E1D28C8B1AE00BA7E51 /* CacheManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		18EC607528C4F7B700874663 /* Detail Photo Controllers */ = {
@@ -545,6 +556,7 @@
 				1897AAD328C4B89600BD724B /* AlbumsCollectionViewCell.swift in Sources */,
 				18B0C11E28C3C848004EB920 /* API Constants.swift in Sources */,
 				187B41C528C2741100C1B253 /* DetailUserViewController.swift in Sources */,
+				18CE2E1E28C8B1AE00BA7E51 /* CacheManager.swift in Sources */,
 				18EC607C28C4FC1000874663 /* TodosTableViewController.swift in Sources */,
 				18CE2E1928C7AAB300BA7E51 /* NetworkService.swift in Sources */,
 				1897AAD628C4C2C200BD724B /* PhotosCollectionViewController.swift in Sources */,

@@ -68,5 +68,16 @@ final class NetworkService {
             callback(dataValue, err)
         }
     }
-
+    static func getImageData(url: URLConvertible, callback: @escaping (_ result: AFDataResponse<Image>) -> Void) {
+        AF.request(url).responseImage { response in
+            callback(response)
+        }
+//        AF.request(url,
+//                   method: .get,
+//                   parameters: nil,
+//                   encoding: JSONEncoding.default,
+//                   headers: nil).responseImage { response in
+//            callback(response, response.error)
+//        }
+    }
 }

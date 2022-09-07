@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class PhotosCollectionViewController: UICollectionViewController {
 
     var album: Album?
     var photos: [Photo] = []
-    var images: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +28,13 @@ class PhotosCollectionViewController: UICollectionViewController {
         if let detailPhotoVC = segue.destination as? DetailPhotoViewController,
            let indexPath = sender as? IndexPath {
             detailPhotoVC.photo = photos[indexPath.row]
-            detailPhotoVC.image = images[indexPath.row]
         }
     }
 
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        images.count
+        photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,8 +45,9 @@ class PhotosCollectionViewController: UICollectionViewController {
         else {
             return UICollectionViewCell()
         }
-        let image = images[indexPath.row]
-        cell.refresh(image: image)
+        let photo = photos[indexPath.row]
+        cell.photo = photo
+        cell.refresh()
         return cell
     }
 
@@ -59,53 +59,19 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     // MARK: - Functions
     func fetchPhotos() {
-        guard
-            let album = album,
-            let url = URL(string: ApiConstants.photoPath + "?albumId=\(album.id)") else { return }
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            if let error = error {
-                print(error)
-            }
-            if let response = response {
-                print(response)
-            }
-            if let data = data {
+        guard let album = album else { return }
+            let url = ApiConstants.photoPath+"?albumId=\(album.id)"
+        NetworkService.getData(url: url) {[weak self] result, error in
+            if let data = result {
                 do {
                     self?.photos = try JSONDecoder().decode([Photo].self, from: data)
                 } catch {
-                    print(error)
+                    print("Error with Decoding JSON data")
                 }
-            }
-            DispatchQueue.main.async {
                 self?.collectionView.reloadData()
-                self?.fetchImages()
+            } else {
+                print(error!)
             }
-        }
-        task.resume()
-    }
-    
-    func fetchImages() {
-        for photo in photos {
-            guard
-                let urlString = photo.url,
-                let url = URL(string: urlString)
-            else {
-                return
-            }
-            let task = URLSession.shared.dataTask(
-                with: url) { [weak self] data, response, error in
-                    if let error = error {
-                        print(error)
-                    }
-                    if let data = data,
-                        let image = UIImage(data: data){
-                        self!.images.append(image)
-                    }
-                    DispatchQueue.main.async {
-                        self?.collectionView.reloadData()
-                    }
-                }
-            task.resume()
         }
     }
 }

@@ -16,31 +16,38 @@
                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-7s-jOq">
-                        <rect key="frame" x="0.0" y="1" width="80" height="77.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder Image" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-7s-jOq">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="6o4-LF-2MR"/>
                             <constraint firstAttribute="height" constant="80" id="dq0-xR-1uT"/>
                         </constraints>
                     </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xhT-cl-uPb">
+                        <rect key="frame" x="21.5" y="43.5" width="37" height="37"/>
+                        <color key="color" red="1" green="0.90228585019999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="PZL-7s-jOq" secondAttribute="trailing" id="5ek-dA-ddL"/>
+                <constraint firstItem="xhT-cl-uPb" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="Gss-LC-gaq"/>
+                <constraint firstItem="xhT-cl-uPb" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="J55-wp-D9Z"/>
                 <constraint firstItem="PZL-7s-jOq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UBd-bb-Y3F"/>
                 <constraint firstItem="PZL-7s-jOq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="adS-EM-obf"/>
                 <constraint firstAttribute="bottom" secondItem="PZL-7s-jOq" secondAttribute="bottom" id="nnf-X1-y2e"/>
             </constraints>
             <size key="customSize" width="285" height="205"/>
             <connections>
+                <outlet property="ActivityIndicator" destination="xhT-cl-uPb" id="sW6-Z2-12n"/>
                 <outlet property="photoImageView" destination="PZL-7s-jOq" id="lrO-D3-8qE"/>
             </connections>
             <point key="canvasLocation" x="307.24637681159425" y="41.517857142857139"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="Placeholder Image" width="120" height="120"/>
     </resources>
 </document>
