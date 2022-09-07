@@ -45,6 +45,29 @@ class PostsTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            let id = posts[indexPath.row].id
+            let url = ApiConstants.postsPath+"/\(id)"
+            NetworkService.removeData(
+                url: url) {[weak self] result, error in
+                    if result != nil {
+                        self?.posts.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .fade)
+                        tableView.reloadData()
+                    } else {
+                        print(error!)
+                    }
+                }
+        default:
+            break
+        }
+    }
     
     // MARK: - Table view delegate
     
@@ -54,7 +77,7 @@ class PostsTableViewController: UITableViewController {
     
     // MARK: - Functions
     
-    func fetchPosts() {
+    private func fetchPosts() {
         guard
             let user = user,
             let urlPosts = URL(string: ApiConstants.postsPath + "?userId=\(user.id)")

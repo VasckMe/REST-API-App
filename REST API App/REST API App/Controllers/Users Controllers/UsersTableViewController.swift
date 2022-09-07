@@ -37,39 +37,12 @@ class UsersTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
-            print("IT'S WORKING!")
         }
-        
-        
-        
-//        guard let url = URL(string: ApiConstants.usersPath) else { return }
-//
-//        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-//            if let error = error {
-//                print(error)
-//            }
-//            if let response = response {
-//                print(response)
-//            }
-//            if let data = data {
-//                print(data)
-//                do {
-//                    self?.users = try JSONDecoder().decode([User].self, from: data)
-//                } catch {
-//                    print(error)
-//                }
-//            }
-//            DispatchQueue.main.async {
-//                self?.tableView.reloadData()
-//            }
-//        }
-//        task.resume()
     }
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return users.count
     }
 

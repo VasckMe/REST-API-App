@@ -50,4 +50,23 @@ final class NetworkService {
             callback(dataValue, err)
         }
     }
+    static func removeData(url: URLConvertible, callback: @escaping (_ result: Data?, _ error: Error?) -> Void) {
+        AF.request(url,
+                   method: .delete,
+                   parameters: nil,
+                   encoding: JSONEncoding.default,
+                   headers: nil).response { response in
+            var dataValue: Data?
+            var err: Error?
+            
+            switch response.result {
+                case .success(let data):
+                dataValue = data
+                case .failure(let error):
+                    err = error
+            }
+            callback(dataValue, err)
+        }
+    }
+
 }
