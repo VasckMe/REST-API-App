@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodosTableViewCell: UITableViewCell {
+final class TodosTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var markImageView: UIImageView!
     @IBOutlet private weak var todoLabel: UILabel!

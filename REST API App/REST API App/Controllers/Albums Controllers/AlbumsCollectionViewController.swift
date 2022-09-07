@@ -7,11 +7,13 @@
 
 import UIKit
 
-class AlbumsCollectionViewController: UICollectionViewController {
+final class AlbumsCollectionViewController: UICollectionViewController {
 
+    // MARK: - Properties
     var user: User?
     var albums: [Album] = []
     
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAlbums()
@@ -29,7 +31,6 @@ class AlbumsCollectionViewController: UICollectionViewController {
         }
     }
     
-
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         albums.count

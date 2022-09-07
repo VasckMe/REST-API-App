@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UsersTableViewController: UITableViewController {
+final class UsersTableViewController: UITableViewController {
 
     // MARK: - Properties
     
@@ -80,6 +80,4 @@ class UsersTableViewController: UITableViewController {
             detailUserVC.user = user
         }
     }
-    
-
 }

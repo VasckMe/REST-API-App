@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailUserViewController: UIViewController {
+final class DetailUserViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var nameLabel: UILabel!

@@ -6,12 +6,13 @@
 //
 
 import UIKit
-
+// MARK: - Protocols
 protocol UpdatePostsData {
     func update()
 }
 
-class PostsTableViewController: UITableViewController {
+// MARK: - Class
+final class PostsTableViewController: UITableViewController {
 
     // MARK: Properties
     var user: User?
@@ -119,6 +120,7 @@ class PostsTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Extensions
 extension PostsTableViewController: UpdatePostsData {
     func update() {
         fetchPosts()

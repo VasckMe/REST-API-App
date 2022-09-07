@@ -41,7 +41,7 @@
             </constraints>
             <size key="customSize" width="285" height="205"/>
             <connections>
-                <outlet property="ActivityIndicator" destination="xhT-cl-uPb" id="sW6-Z2-12n"/>
+                <outlet property="activityIndicator" destination="xhT-cl-uPb" id="Slp-jy-eRQ"/>
                 <outlet property="photoImageView" destination="PZL-7s-jOq" id="lrO-D3-8qE"/>
             </connections>
             <point key="canvasLocation" x="307.24637681159425" y="41.517857142857139"/>

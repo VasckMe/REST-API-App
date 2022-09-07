@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserTableViewCell: UITableViewCell {
+final class UserTableViewCell: UITableViewCell {
 
     // MARK: Outlets
     @IBOutlet weak var idLabel: UILabel!

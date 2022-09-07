@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommentTableViewCell: UITableViewCell {
+final class CommentTableViewCell: UITableViewCell {
 
     // MARK: Outlets
     @IBOutlet private weak var emailLabel: UILabel!

@@ -8,11 +8,13 @@
 import UIKit
 import SwiftyJSON
 
-class PhotosCollectionViewController: UICollectionViewController {
+final class PhotosCollectionViewController: UICollectionViewController {
 
+    // MARK: - Properties
     var album: Album?
     var photos: [Photo] = []
     
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Photos"

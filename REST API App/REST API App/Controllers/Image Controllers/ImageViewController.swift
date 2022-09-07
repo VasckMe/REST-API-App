@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+final class ImageViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet private weak var downloadedImageView: UIImageView!

@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class NewPostViewController: UIViewController {
+final class NewPostViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var postTitleLabel: UITextField!
@@ -18,6 +18,7 @@ class NewPostViewController: UIViewController {
     @IBOutlet private weak var bodyErrorLabel: UILabel!
     @IBOutlet private weak var savePostButton: UIButton!
     
+    // MARK: - Properties
     var isTitleRight = false {
         didSet {
             checkPostButton()
@@ -36,8 +37,10 @@ class NewPostViewController: UIViewController {
     }
     
     // MARK: - Properties
-    var delegate: UpdatePostsData?
     var userId: Int?
+    
+    // MARK: Delegates
+    var delegate: UpdatePostsData?
     
     // MARK: - IBActions
     @IBAction private func savePostAction() {
@@ -85,7 +88,7 @@ class NewPostViewController: UIViewController {
         bodyErrorLabel.isHidden = isBodyRight
     }
 }
-
+    // MARK: - Extensions
 extension NewPostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         checkBodyForError()

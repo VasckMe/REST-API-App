@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailPostViewController: UIViewController {
+final class DetailPostViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var userLabel: UILabel!
@@ -21,7 +21,7 @@ class DetailPostViewController: UIViewController {
     var user: User?
     var comments: [Comment] = []
     
-    // MARK: viewDidLoad
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Post"
@@ -79,6 +79,7 @@ class DetailPostViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension DetailPostViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         comments.count

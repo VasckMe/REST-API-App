@@ -7,11 +7,13 @@
 
 import UIKit
 
-class TodosTableViewController: UITableViewController {
+final class TodosTableViewController: UITableViewController {
 
+    // MARK: - Properties
     var user: User?
     var todos: [Todo] = []
     
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Todos"
@@ -31,7 +33,6 @@ class TodosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100.0
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
@@ -47,6 +48,7 @@ class TodosTableViewController: UITableViewController {
         return cell
     }
 
+    // MARK: - Private functions
     private func fetchTodos() {
         guard
             let user = user,

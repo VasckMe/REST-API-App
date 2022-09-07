@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class LocationViewController: UIViewController {
+final class LocationViewController: UIViewController {
 
     @IBOutlet private weak var map: MKMapView!
     
@@ -20,7 +20,7 @@ class LocationViewController: UIViewController {
         title = "Location"
     }
     
-    func setupUI() {
+    private func setupUI() {
         if
             let user = user,
             let username = user.username,

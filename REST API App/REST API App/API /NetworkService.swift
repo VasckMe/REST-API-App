@@ -12,8 +12,6 @@ import AlamofireImage
 
 final class NetworkService {
     
-    
-    
     static func getData(url: URLConvertible, callback: @escaping (_ result: Data?, _ error: Error?) -> Void) {
         AF.request(url,
                    method: .get,
@@ -25,7 +23,7 @@ final class NetworkService {
             
             switch response.result {
                 case .success(let data):
-                dataValue = data
+                    dataValue = data
                 case .failure(let error):
                     err = error
             }
@@ -43,13 +41,14 @@ final class NetworkService {
             
             switch response.result {
                 case .success(let data):
-                dataValue = data
+                    dataValue = data
                 case .failure(let error):
                     err = error
             }
             callback(dataValue, err)
         }
     }
+
     static func removeData(url: URLConvertible, callback: @escaping (_ result: Data?, _ error: Error?) -> Void) {
         AF.request(url,
                    method: .delete,
@@ -58,26 +57,20 @@ final class NetworkService {
                    headers: nil).response { response in
             var dataValue: Data?
             var err: Error?
-            
+
             switch response.result {
                 case .success(let data):
-                dataValue = data
+                    dataValue = data
                 case .failure(let error):
                     err = error
             }
             callback(dataValue, err)
         }
     }
+
     static func getImageData(url: URLConvertible, callback: @escaping (_ result: AFDataResponse<Image>) -> Void) {
         AF.request(url).responseImage { response in
             callback(response)
         }
-//        AF.request(url,
-//                   method: .get,
-//                   parameters: nil,
-//                   encoding: JSONEncoding.default,
-//                   headers: nil).responseImage { response in
-//            callback(response, response.error)
-//        }
     }
 }

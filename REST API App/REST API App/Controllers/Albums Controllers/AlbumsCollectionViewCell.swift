@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumsCollectionViewCell: UICollectionViewCell {
+final class AlbumsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
